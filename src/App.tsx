@@ -8,6 +8,8 @@ import { GitHub } from "@mui/icons-material";
 import { Results } from "./components/Results";
 import { useQuestionData } from "./hooks/useQuestionData";
 
+
+
 function App() {
   const questions = useQuestionsStore(state => state.questions)
   const { unAnswered } = useQuestionData()
@@ -21,8 +23,8 @@ function App() {
           justifyContent="center"
         >
           <JavaScriptLogo />
-          <Typography sx={{p:4}} variant="h2" component="h1">
-            JavaScript Quiz
+          <Typography sx={{p:3}} variant="h2" component="h1">
+          JavaScript Trivia
           </Typography>
         </Stack>
         {questions.length === 0  && <Start />}
@@ -32,7 +34,7 @@ function App() {
           <a style={{color:"inherit", display:'flex', justifyContent:'center', padding:'10px'}} href="https://github.com/Felipao22" target="_blank"
               rel="noreferrer">
 
-        <GitHub />
+        <GitHub fontSize="large"/>
           </a>
           <strong style={{justifyContent:'center', marginTop:'10px'}}>Felipe Aviani</strong>
         </div>
